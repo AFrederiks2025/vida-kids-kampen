@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIDA Kids Kampen</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .page { padding-bottom: 4rem; }
+
+    /* HERO */
+    .hero {
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+    .vida-wordmark {
+      font-size: clamp(48px, 12vw, 72px);
+      font-weight: 700;
+      color: #FFEA00;
+      letter-spacing: -3px;
+      line-height: 1;
+    }
+    .vida-kids-badge {
+      display: inline-block;
+      background: #FFEA00;
+      color: #000;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 3px 14px;
+      border-radius: 20px;
+      margin-top: 8px;
+    }
+    .hero-tagline {
+      font-size: 16px;
+      color: #888;
+      margin-top: 1.25rem;
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 2rem 1.25rem 0;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #555;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    /* FEATURED CARD */
+    .featured-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .featured-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #000;
+      opacity: 0.35;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .featured-date {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 0.2rem;
+    }
+    .featured-title {
+      font-size: clamp(22px, 5vw, 28px);
+      font-weight: 700;
+      color: #000;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .featured-age {
+      display: inline-block;
+      background: #FFEA00;
+      color: #000;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+    /* MATERIAL ITEMS */
+    .material-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .material-item {
+      background: #FFEA00;
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .material-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .material-type {
+      font-size: 10px;
+      color: #000;
+      opacity: 0.45;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 2px;
+    }
+    .material-text {
+      font-size: 14px;
+      color: #000;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* ARCHIVE */
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    .archive-card {
+      background: #111;
+      border: 0.5px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+    }
+    .archive-date {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .archive-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .archive-age {
+      display: inline-block;
+      border: 0.5px solid #333;
+      color: #555;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem 1rem;
+      color: #444;
+      font-size: 13px;
+      border-top: 1px solid #1a1a1a;
+      margin-top: 3rem;
+    }
+    .footer span { color: #FFEA00; }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="hero">
+      <div class="vida-wordmark">VIDA</div>
+      <div><span class="vida-kids-badge">Kids Kampen</span></div>
+      <p class="hero-tagline">Elke zondag een plek waar de kleinsten ontdekken dat God van hen houdt.</p>
+    </div>
+
+    <div class="section" style="padding-top: 2.5rem;">
+      <div class="section-label">Aankomende zondag</div>
+      <div class="featured-card">
+        <div class="featured-tag">Volgende dienst</div>
+        <div class="featured-date">Zondag 13 april 2026</div>
+        <div class="featured-title">Jezus houdt van jou</div>
+        <div><span class="featured-age">0 – 3 jaar</span></div>
+        <ul class="material-list" style="margin-top: 1.25rem;">
+          <li class="material-item">
+            <div class="material-icon">📖</div>
+            <div>
+              <div class="material-type">Bijbelverhaal</div>
+              <div class="material-text">Jezus en de kinderen — Markus 10:13-16</div>
+            </div>
+          </li>
+          <li class="material-item">
+            <div class="material-icon">🎵</div>
+            <div>
+              <div class="material-type">Lied</div>
+              <div class="material-text">Jezus houdt van mij</div>
+            </div>
+          </li>
+          <li class="material-item">
+            <div class="material-icon">✂️</div>
+            <div>
+              <div class="material-type">Activiteit</div>
+              <div class="material-text">Hartjes knutselen</div>
+            </div>
+          </li>
+          <li class="material-item">
+            <div class="material-icon">💛</div>
+            <div>
+              <div class="material-type">Geheugenvers</div>
+              <div class="material-text">"Laat de kinderen bij Mij komen" — Markus 10:14</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" style="padding-top: 2rem;">
+      <div class="section-label">Vorige zondagen</div>
+      <div class="archive-grid">
+        <div class="archive-card">
+          <div class="archive-date">6 april 2026</div>
+          <div class="archive-title">God maakte alles</div>
+          <div class="archive-age">0 – 3 jaar</div>
+        </div>
+        <div class="archive-card">
+          <div class="archive-date">30 maart 2026</div>
+          <div class="archive-title">Noach en de ark</div>
+          <div class="archive-age">0 – 3 jaar</div>
+        </div>
+        <div class="archive-card">
+          <div class="archive-date">23 maart 2026</div>
+          <div class="archive-title">David en Goliath</div>
+          <div class="archive-age">0 – 3 jaar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      VIDA Kids maakt deel uit van <span>VIDA Kampen</span>
+    </div>
+
+  </div>
+</body>
+</html>
