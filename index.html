@@ -581,6 +581,40 @@
     .bijzonder-tekst strong { color: rgba(255,234,0,0.8); font-weight: 600; }
 
 
+
+    /* FOTO SLIDER */
+    @keyframes slide {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .foto-strip-wrap {
+      overflow: hidden;
+      width: 100%;
+      background: #000;
+      padding: 1rem 0 0;
+    }
+    .foto-strip {
+      display: flex;
+      gap: 10px;
+      width: max-content;
+      animation: slide 40s linear infinite;
+    }
+    .foto-strip:hover { animation-play-state: paused; }
+    .foto-item {
+      width: 160px;
+      height: 120px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid #222;
+    }
+    .foto-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     /* FOOTER */
     .footer {
       text-align: center;
@@ -665,6 +699,25 @@
       <div><span class="vida-kids-badge">Kids Kampen</span></div>
       <p class="hero-tagline">Elke zondag een plek waar de kleinsten ontdekken dat God van hen houdt.</p>
         
+      </div>
+    </div>
+
+    <div class="foto-strip-wrap">
+      <div class="foto-strip">
+        <div class="foto-item"><img src="foto1.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto2.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto3.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto4.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto5.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto6.jpg" alt="VIDA Kids" loading="lazy" /></div>
+
+        <div class="foto-item"><img src="foto1.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto2.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto3.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto4.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto5.jpg" alt="VIDA Kids" loading="lazy" /></div>
+<div class="foto-item"><img src="foto6.jpg" alt="VIDA Kids" loading="lazy" /></div>
+
       </div>
     </div>
 
