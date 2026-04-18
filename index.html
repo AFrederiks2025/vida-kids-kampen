@@ -627,6 +627,79 @@
       margin-top: 3rem;
     }
     .footer span { color: #FFEA00; }
+
+    /* CONTACT */
+    .contact-lijst {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.1rem 1.2rem;
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      border-radius: 14px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    a.contact-item:hover {
+      border-color: rgba(255,234,0,0.4);
+      transform: translateY(-1px);
+    }
+    .contact-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,234,0,0.08);
+      border-radius: 10px;
+    }
+    .contact-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #FFEA00;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+    .contact-waarde {
+      font-size: 14px;
+      color: #fff;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+    .contact-extra {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 2px;
+    }
+    .contact-cta {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, rgba(255,234,0,0.08), rgba(255,234,0,0.02));
+      border: 1px solid rgba(255,234,0,0.2);
+      border-radius: 16px;
+      text-align: center;
+    }
+    .contact-cta-titel {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFEA00;
+      margin-bottom: 0.4rem;
+    }
+    .contact-cta-tekst {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -691,6 +764,7 @@
       <a onclick="showPage('lesinhoud')" id="nav-lesinhoud">Lesinhoud</a>
       <a onclick="showPage('methode')" id="nav-methode">Methode</a>
       <a onclick="showPage('jaarplanning')" id="nav-jaarplanning">Jaarplanning</a>
+      <a onclick="showPage('contact')" id="nav-contact">Contact</a>
     </nav>
   </header>
 
@@ -824,6 +898,14 @@
           <div>
             <div class="kaart-titel">Jaarplanning</div>
             <div class="kaart-beschrijving">Welke thema's per kwartaal?</div>
+          </div>
+          <div class="kaart-arrow">›</div>
+        </div>
+        <div class="kaart" onclick="showPage('contact')">
+          <div class="kaart-icon">✉️</div>
+          <div>
+            <div class="kaart-titel">Contact</div>
+            <div class="kaart-beschrijving">Vragen of aanmelden?</div>
           </div>
           <div class="kaart-arrow">›</div>
         </div>
@@ -1501,6 +1583,78 @@
 
       </div>
     </div>
+    <div class="footer">VIDA Kids maakt deel uit van <span>VIDA Kampen</span></div>
+  </div>
+
+  <!-- ======================== PAGINA: CONTACT ======================== -->
+  <div class="page" id="page-contact">
+    <div class="section" style="padding-top: 3rem;">
+      <div class="section-title">Contact</div>
+      <div class="section-subtitle">Vragen, aanmelden of meehelpen? Neem gerust contact op.</div>
+      <p class="intro-text">We beantwoorden je bericht zo snel mogelijk. Wil je je kind aanmelden voor VIDA Kids of een keertje komen kijken? Laat het ons weten — iedereen is welkom.</p>
+
+      <div class="contact-lijst">
+        <a class="contact-item" href="mailto:kids@vidakampen.nl">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">E-mail</div>
+            <div class="contact-waarde">kids@vidakampen.nl</div>
+            <div class="contact-extra">Voor algemene vragen en aanmeldingen</div>
+          </div>
+        </a>
+
+        <a class="contact-item" href="https://wa.me/31600000000" target="_blank" rel="noopener">
+          <div class="contact-icon">💬</div>
+          <div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-waarde">+31 6 00 00 00 00</div>
+            <div class="contact-extra">Snel een vraag stellen aan het crècheteam</div>
+          </div>
+        </a>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Adres</div>
+            <div class="contact-waarde">VIDA Kampen<br />Straatnaam 123<br />8261 AB Kampen</div>
+            <div class="contact-extra">Ingang kinderwerk aan de zijkant van het gebouw</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🕙</div>
+          <div>
+            <div class="contact-label">Zondagochtend</div>
+            <div class="contact-waarde">Inloop vanaf 10:00 — programma van 10:30 tot 12:00</div>
+            <div class="contact-extra">Breng je kind gerust iets eerder voor een rustige start</div>
+          </div>
+        </div>
+
+        <a class="contact-item" href="https://www.vidakampen.nl" target="_blank" rel="noopener">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-label">VIDA Kampen</div>
+            <div class="contact-waarde">www.vidakampen.nl</div>
+            <div class="contact-extra">Meer weten over de kerk waar VIDA Kids bij hoort</div>
+          </div>
+        </a>
+
+        <a class="contact-item" href="https://www.instagram.com/vidakampen" target="_blank" rel="noopener">
+          <div class="contact-icon">📸</div>
+          <div>
+            <div class="contact-label">Instagram</div>
+            <div class="contact-waarde">@vidakampen</div>
+            <div class="contact-extra">Volg ons voor updates en foto's</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-cta">
+        <div class="contact-cta-titel">Wil je meehelpen?</div>
+        <div class="contact-cta-tekst">Ons team kan altijd versterking gebruiken — van vertellers tot knutselhulpen. Stuur ons een berichtje en we vertellen je er graag meer over.</div>
+      </div>
+    </div>
+
     <div class="footer">VIDA Kids maakt deel uit van <span>VIDA Kampen</span></div>
   </div>
 
