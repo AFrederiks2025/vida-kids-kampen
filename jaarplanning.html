@@ -11,27 +11,71 @@
 </head>
 <body>
 
+  <div class="concept-banner">
+    <div class="concept-banner-track">
+      <span class="concept-item">⚠️ Intern concept</span><span class="concept-sep">·</span>
+      <span class="concept-item">Niet voor extern gebruik</span><span class="concept-sep">·</span>
+      <span class="concept-item">Intern voorstel voor het VIDA Kids team</span><span class="concept-sep">·</span>
+      <span class="concept-item">Nog niet definitief vastgesteld</span><span class="concept-sep">·</span>
+      <span class="concept-item">⚠️ Intern concept</span><span class="concept-sep">·</span>
+      <span class="concept-item">Niet voor extern gebruik</span><span class="concept-sep">·</span>
+      <span class="concept-item">Intern voorstel voor het VIDA Kids team</span><span class="concept-sep">·</span>
+    </div>
+  </div>
+
   <header class="header">
     <a class="header-logo" href="index.html">VIDA <span>Kids</span></a>
     <nav class="nav">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button">Voor VIDA Ouders <span class="nav-arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="werkwijze.html">Werkwijze</a>
+          <a href="rooster.html">Rooster</a>
+        </div>
+      </div>
+      <div class="nav-group has-active">
+        <button class="nav-trigger" type="button">Voor VIDA Kids <span class="nav-arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="doel.html">Doel</a>
+          <a href="programma.html">Programma</a>
+          <a href="lesinhoud.html">Lesinhoud</a>
+          <a href="methode.html">Methode</a>
+          <a href="jaarplanning.html" class="active">Jaarplanning</a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <div class="mobile-menu-group">
+      <div class="mobile-menu-label">Voor VIDA Ouders</div>
+      <a href="werkwijze.html">Werkwijze</a>
+      <a href="rooster.html">Rooster</a>
+    </div>
+    <div class="mobile-menu-group">
+      <div class="mobile-menu-label">Voor VIDA Kids</div>
       <a href="doel.html">Doel</a>
       <a href="programma.html">Programma</a>
       <a href="lesinhoud.html">Lesinhoud</a>
       <a href="methode.html">Methode</a>
       <a href="jaarplanning.html" class="active">Jaarplanning</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <main class="section">
     <div class="section-title">Jaarplanning</div>
     <div class="section-subtitle">Overzicht per kwartaal — seizoen 2025/2026</div>
-    <p class="intro-text">De zondagen met een ✓ zijn al geweest. Per kwartaal zie je de thema's en locaties van het kinderwerk.</p>
+    <p class="intro-text">Hieronder zie je de thema's per kwartaal. Voor de concrete teamindeling per zondag — wie er staat ingeroosterd — kijk op het <a href="rooster.html" style="color:#FFEA00;">rooster</a>.</p>
 
     <div class="kwartaal-lijst">
 
-      <!-- Q4 2025 -->
       <div class="kwartaal-kaart geweest">
         <div class="kwartaal-header">
           <div class="kwartaal-nummer">Q4</div>
@@ -42,52 +86,17 @@
         </div>
         <div class="kwartaal-body">
           <div class="maand-rij geweest">
-            <div class="maand-label">19 okt</div>
+            <div class="maand-label">Okt – Nov</div>
             <div class="maand-content">
-              <div class="maand-serie">Crèche opstart <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Eerste verslag</span>
+              <div class="maand-serie">Crèche opstart & pilots</div>
+              <span class="maand-thema">Villa Nova, Rehoboth, Bovenkerk</span>
             </div>
           </div>
           <div class="maand-rij geweest">
-            <div class="maand-label">26 okt</div>
+            <div class="maand-label">December</div>
             <div class="maand-content">
-              <div class="maand-serie">Crèche <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Aimée + ouder</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">9 nov</div>
-            <div class="maand-content">
-              <div class="maand-serie">Pilot 2 locaties <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Villa Nova + Rehoboth</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">16 nov</div>
-            <div class="maand-content">
-              <div class="maand-serie">Bovenkerk <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Paulien</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">23 nov</div>
-            <div class="maand-content">
-              <div class="maand-serie">Crèche <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Femke</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">7 dec</div>
-            <div class="maand-content">
-              <div class="maand-serie">Crèche <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Aimée + Paulien</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">14 dec</div>
-            <div class="maand-content">
-              <div class="maand-serie">Pilot 2 locaties <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">IJsselmuiden + Kampen</span>
+              <div class="maand-serie">Advent & Kerstvakantie</div>
+              <span class="maand-thema">Pilot 2 locaties</span>
             </div>
           </div>
           <div class="bijzonder-rij">
@@ -97,7 +106,6 @@
         </div>
       </div>
 
-      <!-- Q1 2026 -->
       <div class="kwartaal-kaart geweest">
         <div class="kwartaal-header">
           <div class="kwartaal-nummer">Q1</div>
@@ -108,94 +116,24 @@
         </div>
         <div class="kwartaal-body">
           <div class="maand-rij geweest">
-            <div class="maand-label">4 jan</div>
+            <div class="maand-label">Januari</div>
             <div class="maand-content">
-              <div class="maand-serie">Geen crèche <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Kerstvakantie</span>
+              <div class="maand-serie">De schepping</div>
+              <span class="maand-thema">Genesis 1-2</span>
             </div>
           </div>
           <div class="maand-rij geweest">
-            <div class="maand-label">11 jan</div>
+            <div class="maand-label">Februari</div>
             <div class="maand-content">
-              <div class="maand-serie">Burgwalkerk <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Samuel + Eline</span>
+              <div class="maand-serie">Adam en Eva / Noach</div>
+              <span class="maand-thema">Begin van de mensheid</span>
             </div>
           </div>
           <div class="maand-rij geweest">
-            <div class="maand-label">18 jan</div>
+            <div class="maand-label">Maart</div>
             <div class="maand-content">
-              <div class="maand-serie">IJsselmuiden (pilot) <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Romy + Ineke</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">25 jan</div>
-            <div class="maand-content">
-              <div class="maand-serie">Stadskazerne <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Paulien + Wouter</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">1 feb</div>
-            <div class="maand-content">
-              <div class="maand-serie">Stadskazerne <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Lois + Ilona / Margarita</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">8 feb</div>
-            <div class="maand-content">
-              <div class="maand-serie">Bovenkerk <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Samuel + Anton</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">15 feb</div>
-            <div class="maand-content">
-              <div class="maand-serie">Stadskazerne <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Femke + Ilona</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">22 feb</div>
-            <div class="maand-content">
-              <div class="maand-serie">Stadskazerne <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Aimée + Mariëlle</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">1 mrt</div>
-            <div class="maand-content">
-              <div class="maand-serie">Stadskazerne <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Samuel + Patrick</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">8 mrt</div>
-            <div class="maand-content">
-              <div class="maand-serie">Bovenkerk <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Paulien + Lisa</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">15 mrt</div>
-            <div class="maand-content">
-              <div class="maand-serie">Stadskazerne <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Lisa + Romy</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">22 mrt</div>
-            <div class="maand-content">
-              <div class="maand-serie">Stadskazerne <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Aimée + Lisa</span>
-            </div>
-          </div>
-          <div class="maand-rij geweest">
-            <div class="maand-label">29 mrt</div>
-            <div class="maand-content">
-              <div class="maand-serie">Stadskazerne <span class="check-badge">✓ Geweest</span></div>
-              <span class="maand-thema">Femke + Wouter</span>
+              <div class="maand-serie">Regenboog & Pasen</div>
+              <span class="maand-thema">Belofte & opstanding</span>
             </div>
           </div>
           <div class="bijzonder-rij">
@@ -205,7 +143,6 @@
         </div>
       </div>
 
-      <!-- Q2 2026 -->
       <div class="kwartaal-kaart">
         <div class="kwartaal-header">
           <div class="kwartaal-nummer">Q2</div>
@@ -243,7 +180,6 @@
         </div>
       </div>
 
-      <!-- Q3 2026 -->
       <div class="kwartaal-kaart">
         <div class="kwartaal-header">
           <div class="kwartaal-nummer">Q3</div>
@@ -281,7 +217,6 @@
         </div>
       </div>
 
-      <!-- Q4 2026 -->
       <div class="kwartaal-kaart">
         <div class="kwartaal-header">
           <div class="kwartaal-nummer">Q4</div>
@@ -324,5 +259,6 @@
 
   <footer class="footer">VIDA Kids maakt deel uit van <span>VIDA Kampen</span></footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
