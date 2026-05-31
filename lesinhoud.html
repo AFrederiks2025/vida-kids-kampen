@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesinhoud — VIDA Kids Kampen</title>
+  <meta name="description" content="De Bijbelverhalen en thematische series die we behandelen bij VIDA Kids." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <a class="header-logo" href="index.html">VIDA <span>Kids</span></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="doel.html">Doel</a>
+      <a href="programma.html">Programma</a>
+      <a href="lesinhoud.html" class="active">Lesinhoud</a>
+      <a href="methode.html">Methode</a>
+      <a href="jaarplanning.html">Jaarplanning</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="section">
+    <div class="section-title">Lesinhoud</div>
+    <div class="section-subtitle">Welke verhalen en thema's behandelen we?</div>
+    <p class="intro-text">We werken met thematische series van 4 tot 6 weken. Elk verhaal heeft een helder thema dat aansluit bij de belevingswereld van het kind. Tik op een verhaal om de bijbehorende Bijbeltekst te lezen.</p>
+    <div class="series-lijst">
+      <div class="serie-kaart">
+        <div class="serie-header">
+          <div class="serie-icon">☀️</div>
+          <div>
+            <div class="serie-titel">God maakte alles</div>
+            <div><span class="serie-thema">Schepping</span></div>
+            <div class="serie-leeftijd">0–6 jaar</div>
+          </div>
+        </div>
+        <div class="serie-body">
+          <div class="serie-verhaal" onclick="openVers('Genesis 1:1', '&quot;In het begin schiep God de hemel en de aarde.&quot;')">De schepping (Genesis 1-2)</div>
+          <div class="serie-verhaal" onclick="openVers('Genesis 2:7', '&quot;Toen vormde de HEERE God de mens uit het stof van de aardbodem en blies de levensadem in zijn neusgaten; zo werd de mens tot een levend wezen.&quot;')">Adam en Eva in de tuin</div>
+          <div class="serie-verhaal" onclick="openVers('Genesis 6:22', '&quot;En Noach deed het; overeenkomstig alles wat God hem geboden had, zo deed hij.&quot;')">Noach en de ark</div>
+          <div class="serie-verhaal" onclick="openVers('Genesis 9:13', '&quot;Mijn boog heb Ik in de wolken gegeven; die zal dienen als teken van het verbond tussen Mij en de aarde.&quot;')">De regenboog als belofte</div>
+        </div>
+      </div>
+      <div class="serie-kaart">
+        <div class="serie-header">
+          <div class="serie-icon">⭐</div>
+          <div>
+            <div class="serie-titel">Jezus houdt van mij</div>
+            <div><span class="serie-thema">Liefde van God</span></div>
+            <div class="serie-leeftijd">0–6 jaar</div>
+          </div>
+        </div>
+        <div class="serie-body">
+          <div class="serie-verhaal" onclick="openVers('Markus 10:14', '&quot;Laat de kinderen bij Mij komen en verhinder hen niet, want voor zulke mensen is het Koninkrijk van God.&quot;')">Jezus en de kinderen (Markus 10)</div>
+          <div class="serie-verhaal" onclick="openVers('Lukas 15:20', '&quot;En toen hij nog ver weg was, zag zijn vader hem en deze was met innerlijke ontferming bewogen en hij snelde hem tegemoet, viel hem om de hals en kuste hem.&quot;')">De verloren zoon</div>
+          <div class="serie-verhaal" onclick="openVers('Lukas 10:27', '&quot;U zult uw naaste liefhebben als uzelf.&quot;')">De barmhartige Samaritaan</div>
+          <div class="serie-verhaal" onclick="openVers('Lukas 19:10', '&quot;Want de Zoon des mensen is gekomen om te zoeken en zalig te maken wat verloren is.&quot;')">Zacheüs in de boom</div>
+        </div>
+      </div>
+      <div class="serie-kaart">
+        <div class="serie-header">
+          <div class="serie-icon">⚓</div>
+          <div>
+            <div class="serie-titel">Groot geloof</div>
+            <div><span class="serie-thema">Vertrouwen</span></div>
+            <div class="serie-leeftijd">4–12 jaar</div>
+          </div>
+        </div>
+        <div class="serie-body">
+          <div class="serie-verhaal" onclick="openVers('1 Samuel 17:47', '&quot;De strijd is van de HEERE, en Hij zal u in onze hand geven.&quot;')">David en Goliath</div>
+          <div class="serie-verhaal" onclick="openVers('Daniël 6:23', '&quot;Mijn God heeft Zijn engel gezonden en Hij heeft de muil van de leeuwen toegesloten.&quot;')">Daniël in de leeuwenkuil</div>
+          <div class="serie-verhaal" onclick="openVers('Jozua 6:20', '&quot;Toen het volk juichte, stortte de muur in en het volk klom de stad in, ieder recht voor zich uit, en zij namen de stad in.&quot;')">Jozua en de muren van Jericho</div>
+          <div class="serie-verhaal" onclick="openVers('Mattheüs 14:31', '&quot;Jezus stak meteen Zijn hand uit, greep hem vast en zei tegen hem: Kleingelovige, waarom hebt u getwijfeld?&quot;')">Petrus loopt op water</div>
+        </div>
+      </div>
+      <div class="serie-kaart">
+        <div class="serie-header">
+          <div class="serie-icon">🕊️</div>
+          <div>
+            <div class="serie-titel">Woorden van Jezus</div>
+            <div><span class="serie-thema">Bergrede & gelijkenissen</span></div>
+            <div class="serie-leeftijd">6–12 jaar</div>
+          </div>
+        </div>
+        <div class="serie-body">
+          <div class="serie-verhaal" onclick="openVers('Mattheüs 13:23', '&quot;Maar het zaad dat in de goede aarde gezaaid is, dat is hij die het Woord hoort en begrijpt, en die vrucht draagt.&quot;')">De zaaier</div>
+          <div class="serie-verhaal" onclick="openVers('Mattheüs 13:31-32', '&quot;Het Koninkrijk der hemelen is gelijk aan een mosterdzaad... het kleinste van alle zaden, maar het wordt groter dan de tuingewassen.&quot;')">Het mosterdzaadje</div>
+          <div class="serie-verhaal" onclick="openVers('Lukas 15:6', '&quot;Wees blij met mij, want ik heb mijn schaap gevonden, dat verloren was.&quot;')">Het verloren schaap</div>
+          <div class="serie-verhaal" onclick="openVers('Mattheüs 5:14', '&quot;U bent het licht van de wereld. Een stad die boven op een berg ligt, kan niet verborgen zijn.&quot;')">Licht voor de wereld</div>
+        </div>
+      </div>
+      <div class="serie-kaart">
+        <div class="serie-header">
+          <div class="serie-icon">⚡</div>
+          <div>
+            <div class="serie-titel">Helden van het geloof</div>
+            <div><span class="serie-thema">Bijbelse karakters</span></div>
+            <div class="serie-leeftijd">6–12 jaar</div>
+          </div>
+        </div>
+        <div class="serie-body">
+          <div class="serie-verhaal" onclick="openVers('Exodus 14:14', '&quot;De HEERE zal voor u strijden, en ú moet stil zijn.&quot;')">Mozes en de uittocht</div>
+          <div class="serie-verhaal" onclick="openVers('Ruth 1:16', '&quot;Waar u heen gaat, zal ik ook gaan, en waar u overnacht, zal ik overnachten. Uw volk is mijn volk en uw God mijn God.&quot;')">Ruth en Naomi</div>
+          <div class="serie-verhaal" onclick="openVers('Ester 4:14', '&quot;En wie weet of jij niet juist voor een tijd als deze tot deze koninklijke waardigheid gekomen bent.&quot;')">Ester redt haar volk</div>
+          <div class="serie-verhaal" onclick="openVers('Filippenzen 4:13', '&quot;Alle dingen kan ik aan door Christus, Die mij kracht geeft.&quot;')">Paulus en zijn reizen</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">VIDA Kids maakt deel uit van <span>VIDA Kampen</span></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
