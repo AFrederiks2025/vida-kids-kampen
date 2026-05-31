@@ -11,18 +11,63 @@
 </head>
 <body>
 
+  <div class="concept-banner">
+    <div class="concept-banner-track">
+      <span class="concept-item">⚠️ Intern concept</span><span class="concept-sep">·</span>
+      <span class="concept-item">Niet voor extern gebruik</span><span class="concept-sep">·</span>
+      <span class="concept-item">Intern voorstel voor het VIDA Kids team</span><span class="concept-sep">·</span>
+      <span class="concept-item">Nog niet definitief vastgesteld</span><span class="concept-sep">·</span>
+      <span class="concept-item">⚠️ Intern concept</span><span class="concept-sep">·</span>
+      <span class="concept-item">Niet voor extern gebruik</span><span class="concept-sep">·</span>
+      <span class="concept-item">Intern voorstel voor het VIDA Kids team</span><span class="concept-sep">·</span>
+    </div>
+  </div>
+
   <header class="header">
     <a class="header-logo" href="index.html">VIDA <span>Kids</span></a>
     <nav class="nav">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html" class="nav-link active">Home</a>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button">Voor VIDA Ouders <span class="nav-arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="werkwijze.html">Werkwijze</a>
+          <a href="rooster.html">Rooster</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button">Voor VIDA Kids <span class="nav-arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="doel.html">Doel</a>
+          <a href="programma.html">Programma</a>
+          <a href="lesinhoud.html">Lesinhoud</a>
+          <a href="methode.html">Methode</a>
+          <a href="jaarplanning.html">Jaarplanning</a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html" class="active">Home</a>
+    <div class="mobile-menu-group">
+      <div class="mobile-menu-label">Voor VIDA Ouders</div>
+      <a href="werkwijze.html">Werkwijze</a>
+      <a href="rooster.html">Rooster</a>
+    </div>
+    <div class="mobile-menu-group">
+      <div class="mobile-menu-label">Voor VIDA Kids</div>
       <a href="doel.html">Doel</a>
       <a href="programma.html">Programma</a>
       <a href="lesinhoud.html">Lesinhoud</a>
       <a href="methode.html">Methode</a>
       <a href="jaarplanning.html">Jaarplanning</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <div class="hero">
     <div class="vida-wordmark">VIDA</div>
@@ -48,7 +93,37 @@
   </div>
 
   <div class="section">
-    <div class="section-label">Ontdek ons kinderwerk</div>
+    <div class="section-label">Voor VIDA Ouders</div>
+    <div class="kaarten-grid">
+      <a class="kaart" href="werkwijze.html">
+        <div class="kaart-icon">📋</div>
+        <div>
+          <div class="kaart-titel">Werkwijze</div>
+          <div class="kaart-beschrijving">Hoe werkt de oppascrèche?</div>
+        </div>
+        <div class="kaart-arrow">›</div>
+      </a>
+      <a class="kaart" href="rooster.html">
+        <div class="kaart-icon">🗓️</div>
+        <div>
+          <div class="kaart-titel">Rooster</div>
+          <div class="kaart-beschrijving">Wie staat wanneer ingeroosterd?</div>
+        </div>
+        <div class="kaart-arrow">›</div>
+      </a>
+      <a class="kaart" href="contact.html">
+        <div class="kaart-icon">💬</div>
+        <div>
+          <div class="kaart-titel">Groepsapp & Contact</div>
+          <div class="kaart-beschrijving">Sluit je aan bij de crèche-app</div>
+        </div>
+        <div class="kaart-arrow">›</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Voor VIDA Kids</div>
     <div class="kaarten-grid">
       <a class="kaart" href="doel.html">
         <div class="kaart-icon">🎯</div>
@@ -90,18 +165,11 @@
         </div>
         <div class="kaart-arrow">›</div>
       </a>
-      <a class="kaart" href="contact.html">
-        <div class="kaart-icon">✉️</div>
-        <div>
-          <div class="kaart-titel">Contact</div>
-          <div class="kaart-beschrijving">Vragen of aanmelden?</div>
-        </div>
-        <div class="kaart-arrow">›</div>
-      </a>
     </div>
   </div>
 
   <footer class="footer">VIDA Kids maakt deel uit van <span>VIDA Kampen</span></footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

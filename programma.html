@@ -11,75 +11,99 @@
 </head>
 <body>
 
+  <div class="concept-banner">
+    <div class="concept-banner-track">
+      <span class="concept-item">⚠️ Intern concept</span><span class="concept-sep">·</span>
+      <span class="concept-item">Niet voor extern gebruik</span><span class="concept-sep">·</span>
+      <span class="concept-item">Intern voorstel voor het VIDA Kids team</span><span class="concept-sep">·</span>
+      <span class="concept-item">Nog niet definitief vastgesteld</span><span class="concept-sep">·</span>
+      <span class="concept-item">⚠️ Intern concept</span><span class="concept-sep">·</span>
+      <span class="concept-item">Niet voor extern gebruik</span><span class="concept-sep">·</span>
+      <span class="concept-item">Intern voorstel voor het VIDA Kids team</span><span class="concept-sep">·</span>
+    </div>
+  </div>
+
   <header class="header">
     <a class="header-logo" href="index.html">VIDA <span>Kids</span></a>
     <nav class="nav">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button">Voor VIDA Ouders <span class="nav-arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="werkwijze.html">Werkwijze</a>
+          <a href="rooster.html">Rooster</a>
+        </div>
+      </div>
+      <div class="nav-group has-active">
+        <button class="nav-trigger" type="button">Voor VIDA Kids <span class="nav-arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="doel.html">Doel</a>
+          <a href="programma.html" class="active">Programma</a>
+          <a href="lesinhoud.html">Lesinhoud</a>
+          <a href="methode.html">Methode</a>
+          <a href="jaarplanning.html">Jaarplanning</a>
+        </div>
+      </div>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <div class="mobile-menu-group">
+      <div class="mobile-menu-label">Voor VIDA Ouders</div>
+      <a href="werkwijze.html">Werkwijze</a>
+      <a href="rooster.html">Rooster</a>
+    </div>
+    <div class="mobile-menu-group">
+      <div class="mobile-menu-label">Voor VIDA Kids</div>
       <a href="doel.html">Doel</a>
       <a href="programma.html" class="active">Programma</a>
       <a href="lesinhoud.html">Lesinhoud</a>
       <a href="methode.html">Methode</a>
       <a href="jaarplanning.html">Jaarplanning</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <main class="section">
     <div class="section-title">Programma</div>
     <div class="section-subtitle">Hoe ziet een zondagochtend eruit?</div>
+    <p class="intro-text">Wil je de volledige werkwijze van de oppascrèche weten? Bekijk dan <a href="werkwijze.html" style="color:#FFEA00;">de werkwijze-pagina</a>.</p>
     <div class="tijdlijn">
       <div class="tijdblok">
-        <div class="tijdblok-tijd">10:00</div>
+        <div class="tijdblok-tijd">09:30</div>
+        <div class="tijdblok-dot-col"><div class="tijdblok-dot"></div></div>
+        <div class="tijdblok-kaart">
+          <div class="tijdblok-kaart-icon">📦</div>
+          <div>
+            <div class="tijdblok-titel">Verzamelen</div>
+            <div class="tijdblok-beschrijving">Oppassers verzamelen in de crècheruimte, speelgoedbakken klaarzetten.</div>
+          </div>
+        </div>
+      </div>
+      <div class="tijdblok">
+        <div class="tijdblok-tijd">09:50</div>
         <div class="tijdblok-dot-col"><div class="tijdblok-dot"></div></div>
         <div class="tijdblok-kaart">
           <div class="tijdblok-kaart-icon">⭐</div>
           <div>
-            <div class="tijdblok-titel">Welkom</div>
-            <div class="tijdblok-beschrijving">Kinderen worden ontvangen, even bijpraten en settelen.</div>
+            <div class="tijdblok-titel">Ontvangst</div>
+            <div class="tijdblok-beschrijving">Ouders en kinderen arriveren. Naamstickers op de rug, even spelen en settelen.</div>
           </div>
         </div>
       </div>
       <div class="tijdblok">
-        <div class="tijdblok-tijd">10:10</div>
+        <div class="tijdblok-tijd">10:30</div>
         <div class="tijdblok-dot-col"><div class="tijdblok-dot"></div></div>
         <div class="tijdblok-kaart">
-          <div class="tijdblok-kaart-icon">🧩</div>
+          <div class="tijdblok-kaart-icon">🍎</div>
           <div>
-            <div class="tijdblok-titel">Openingsactiviteit</div>
-            <div class="tijdblok-beschrijving">Een korte energizer of spel om iedereen wakker te maken.</div>
-          </div>
-        </div>
-      </div>
-      <div class="tijdblok">
-        <div class="tijdblok-tijd">10:20</div>
-        <div class="tijdblok-dot-col"><div class="tijdblok-dot"></div></div>
-        <div class="tijdblok-kaart">
-          <div class="tijdblok-kaart-icon">📖</div>
-          <div>
-            <div class="tijdblok-titel">Bijbelverhaal</div>
-            <div class="tijdblok-beschrijving">Het verhaal van de dag wordt verteld op een aansprekende manier.</div>
-          </div>
-        </div>
-      </div>
-      <div class="tijdblok">
-        <div class="tijdblok-tijd">10:35</div>
-        <div class="tijdblok-dot-col"><div class="tijdblok-dot"></div></div>
-        <div class="tijdblok-kaart">
-          <div class="tijdblok-kaart-icon">✏️</div>
-          <div>
-            <div class="tijdblok-titel">Verwerking</div>
-            <div class="tijdblok-beschrijving">Knutselen, tekenen of een werkblad passend bij het thema.</div>
-          </div>
-        </div>
-      </div>
-      <div class="tijdblok">
-        <div class="tijdblok-tijd">10:50</div>
-        <div class="tijdblok-dot-col"><div class="tijdblok-dot"></div></div>
-        <div class="tijdblok-kaart">
-          <div class="tijdblok-kaart-icon">🎵</div>
-          <div>
-            <div class="tijdblok-titel">Lied & afsluiting</div>
-            <div class="tijdblok-beschrijving">Samen zingen en kort afronden met een gebed.</div>
+            <div class="tijdblok-titel">Gezamenlijk moment</div>
+            <div class="tijdblok-beschrijving">Samen fruit eten en drinken in een kring — structuur en een waardevol groepsmoment.</div>
           </div>
         </div>
       </div>
@@ -95,13 +119,13 @@
         </div>
       </div>
       <div class="tijdblok">
-        <div class="tijdblok-tijd">11:15</div>
+        <div class="tijdblok-tijd">11:45</div>
         <div class="tijdblok-dot-col"><div class="tijdblok-dot"></div></div>
         <div class="tijdblok-kaart">
           <div class="tijdblok-kaart-icon">🎮</div>
           <div>
-            <div class="tijdblok-titel">Vrij spel</div>
-            <div class="tijdblok-beschrijving">Vrije tijd tot aan het einde van de dienst. De kinderen blijven welkom totdat de dienst is afgelopen — ook als deze uitloopt. Zo kunnen beide ouders hun taak in de grote of buurtdienst vervullen en hoeven we een heilig moment niet te verstoren.</div>
+            <div class="tijdblok-titel">Einde dienst</div>
+            <div class="tijdblok-beschrijving">Vrije tijd tot aan het einde van de dienst. De kinderen blijven welkom totdat de dienst echt is afgelopen — ook als deze uitloopt. Zo kunnen beide ouders hun taak in de grote of buurtdienst vervullen en hoeven we een heilig moment niet te verstoren.</div>
           </div>
         </div>
       </div>
@@ -110,5 +134,6 @@
 
   <footer class="footer">VIDA Kids maakt deel uit van <span>VIDA Kampen</span></footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
