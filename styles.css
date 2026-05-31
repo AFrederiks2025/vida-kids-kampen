@@ -1028,6 +1028,140 @@ a.contact-item:hover {
   line-height: 1.6;
 }
 
+/* OVER VIDA KAMPEN PAGINA */
+.vk-card {
+  background: linear-gradient(135deg, rgba(255,234,0,0.08), rgba(255,234,0,0.02));
+  border: 1px solid rgba(255,234,0,0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.vk-card-titel {
+  font-size: 17px;
+  font-weight: 700;
+  color: #FFEA00;
+  margin-bottom: 0.5rem;
+}
+.vk-card-tekst {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+}
+.vk-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.vk-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 1rem 1.1rem;
+  background: rgba(255,255,255,0.03);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+}
+.vk-info-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(255,234,0,0.1);
+  border: 0.5px solid rgba(255,234,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.vk-info-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #FFEA00;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.vk-info-tekst {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.55;
+}
+.vk-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 1.4rem 1.5rem;
+  background: #FFEA00;
+  color: #000;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  margin-top: 1rem;
+}
+.vk-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(255,234,0,0.2);
+}
+.vk-cta-pijl {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  flex-shrink: 0;
+}
+.vk-cta-titel {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 2px;
+}
+.vk-cta-tekst {
+  font-size: 12px;
+  color: rgba(0,0,0,0.65);
+  line-height: 1.5;
+}
+
+/* HOME: components-grid (Crèche, Events, Café) */
+.componenten-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+}
+.component-kaart {
+  padding: 1.1rem 1.2rem;
+  background: rgba(255,255,255,0.03);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+}
+.component-icon {
+  font-size: 22px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+.component-titel {
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFEA00;
+  margin-bottom: 0.35rem;
+}
+.component-leeftijd {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255,234,0,0.7);
+  background: rgba(255,234,0,0.08);
+  border: 0.5px solid rgba(255,234,0,0.2);
+  padding: 1px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.component-tekst {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.55;
+}
+
 /* NOW BAR (datum + tijdstip bovenaan) */
 .now-bar {
   background: rgba(255,234,0,0.06);
