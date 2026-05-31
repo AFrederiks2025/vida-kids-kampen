@@ -414,6 +414,13 @@ body {
 .doel-tekst { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
 
 /* BIJBELTEKST (klikbare afkorting + pop-up) */
+.vers-chips {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.vers-chips .vers-chip { margin-top: 0; }
 .vers-chip {
   margin-top: 10px;
   display: inline-flex;
