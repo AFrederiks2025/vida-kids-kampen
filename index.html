@@ -289,6 +289,54 @@
     .doel-titel { font-size: 13px; font-weight: 600; color: #FFEA00; margin-bottom: 4px; }
     .doel-tekst { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
 
+    /* BIJBELTEKST (uitklapbaar) */
+    .vers {
+      margin-top: 10px;
+      border-top: 0.5px solid rgba(255,255,255,0.08);
+      padding-top: 9px;
+    }
+    .vers summary {
+      list-style: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #FFEA00;
+      user-select: none;
+    }
+    .vers summary::-webkit-details-marker { display: none; }
+    .vers summary::before {
+      content: "📖";
+      font-size: 11px;
+    }
+    .vers summary::after {
+      content: "›";
+      font-size: 14px;
+      line-height: 1;
+      transition: transform 0.2s;
+      opacity: 0.7;
+    }
+    .vers[open] summary::after { transform: rotate(90deg); }
+    .vers-tekst {
+      margin-top: 8px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+      font-style: italic;
+      border-left: 2px solid rgba(255,234,0,0.35);
+      padding-left: 10px;
+    }
+    .vers-ref {
+      display: block;
+      margin-top: 5px;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 600;
+      color: rgba(255,234,0,0.75);
+    }
+
     /* TIJDLIJN (programma) */
     .tijdlijn { position: relative; }
     .tijdlijn::before {
@@ -908,6 +956,10 @@
           <div>
             <div class="doel-titel">Geliefd voelen</div>
             <div class="doel-tekst">Elk kind ervaart dat het gekend en geliefd is — door God en door de mensen om hem heen. Dit is de basis van alles wat we doen.</div>
+            <details class="vers">
+              <summary>Bijbeltekst lezen</summary>
+              <div class="vers-tekst">"Met een eeuwige liefde heb Ik u liefgehad, daarom heb Ik u getrokken met goedertierenheid."<span class="vers-ref">Jeremia 31:3</span></div>
+            </details>
           </div>
         </div>
         <div class="doel-item">
@@ -915,6 +967,10 @@
           <div>
             <div class="doel-titel">Bijbel leren kennen</div>
             <div class="doel-tekst">Kinderen maken op een toegankelijke manier kennis met de verhalen en waarden uit de Bijbel, passend bij hun leeftijd.</div>
+            <details class="vers">
+              <summary>Bijbeltekst lezen</summary>
+              <div class="vers-tekst">"Uw woord is een lamp voor mijn voet en een licht op mijn pad."<span class="vers-ref">Psalm 119:105</span></div>
+            </details>
           </div>
         </div>
         <div class="doel-item">
@@ -922,6 +978,10 @@
           <div>
             <div class="doel-titel">Gemeenschap ervaren</div>
             <div class="doel-tekst">Samen spelen, delen en leren. Kinderen bouwen vriendschappen en leren wat het betekent om onderdeel te zijn van een gemeenschap.</div>
+            <details class="vers">
+              <summary>Bijbeltekst lezen</summary>
+              <div class="vers-tekst">"Want waar twee of drie in Mijn Naam bijeengekomen zijn, daar ben Ik in hun midden."<span class="vers-ref">Mattheüs 18:20</span></div>
+            </details>
           </div>
         </div>
         <div class="doel-item">
@@ -929,6 +989,10 @@
           <div>
             <div class="doel-titel">Geloof ontdekken</div>
             <div class="doel-tekst">We prikkelen nieuwsgierigheid. Vragen zijn welkom. Kinderen mogen op hun eigen tempo ontdekken wat geloof voor hen betekent.</div>
+            <details class="vers">
+              <summary>Bijbeltekst lezen</summary>
+              <div class="vers-tekst">"Bid, en u zal gegeven worden; zoek, en u zult vinden; klop, en er zal voor u opengedaan worden."<span class="vers-ref">Mattheüs 7:7</span></div>
+            </details>
           </div>
         </div>
         <div class="doel-item">
@@ -936,6 +1000,10 @@
           <div>
             <div class="doel-titel">Veilige omgeving</div>
             <div class="doel-tekst">Het kinderwerk is een veilige plek waar elk kind zichzelf mag zijn, ongeacht achtergrond of kennisniveau.</div>
+            <details class="vers">
+              <summary>Bijbeltekst lezen</summary>
+              <div class="vers-tekst">"De HEERE is mijn Herder, mij ontbreekt niets."<span class="vers-ref">Psalm 23:1</span></div>
+            </details>
           </div>
         </div>
         <div class="doel-item">
@@ -943,6 +1011,10 @@
           <div>
             <div class="doel-titel">Fundering leggen</div>
             <div class="doel-tekst">We leggen een fundament dat meegroeit. Wat kinderen hier leren, draagt hen door het leven — ook als ze ouder worden.</div>
+            <details class="vers">
+              <summary>Bijbeltekst lezen</summary>
+              <div class="vers-tekst">"Ieder dan die deze woorden van Mij hoort en ze doet, die zal Ik vergelijken met een verstandig man, die zijn huis op de rots bouwde."<span class="vers-ref">Mattheüs 7:24</span></div>
+            </details>
           </div>
         </div>
       </div>
