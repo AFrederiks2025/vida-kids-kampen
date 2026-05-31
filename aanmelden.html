@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aanmelden — VIDA Kids Kampen</title>
+  <meta name="description" content="Geef je beschikbaarheid door als oppasser of meld je kind aan voor VIDA Kids." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="concept-banner">
+    <div class="concept-banner-track">
+      <span class="concept-item">⚠️ Intern concept</span><span class="concept-sep">·</span>
+      <span class="concept-item">Niet voor extern gebruik</span><span class="concept-sep">·</span>
+      <span class="concept-item">Intern voorstel voor het VIDA Kids team</span><span class="concept-sep">·</span>
+      <span class="concept-item">Nog niet definitief vastgesteld</span><span class="concept-sep">·</span>
+      <span class="concept-item">⚠️ Intern concept</span><span class="concept-sep">·</span>
+      <span class="concept-item">Niet voor extern gebruik</span><span class="concept-sep">·</span>
+      <span class="concept-item">Intern voorstel voor het VIDA Kids team</span><span class="concept-sep">·</span>
+    </div>
+  </div>
+
+  <header class="header">
+    <a class="header-logo" href="index.html">VIDA <span>Kids</span></a>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="nav-group has-active">
+        <button class="nav-trigger" type="button">Voor VIDA Ouders <span class="nav-arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="werkwijze.html">Werkwijze</a>
+          <a href="rooster.html">Rooster</a>
+          <a href="aanmelden.html" class="active">Aanmelden</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button">Voor VIDA Kids <span class="nav-arrow">▾</span></button>
+        <div class="nav-dropdown">
+          <a href="doel.html">Doel</a>
+          <a href="programma.html">Programma</a>
+          <a href="lesinhoud.html">Lesinhoud</a>
+          <a href="methode.html">Methode</a>
+          <a href="jaarplanning.html">Jaarplanning</a>
+        </div>
+      </div>
+      <a href="vida-kampen.html" class="nav-link">Over VIDA Kampen</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <div class="mobile-menu-group">
+      <div class="mobile-menu-label">Voor VIDA Ouders</div>
+      <a href="werkwijze.html">Werkwijze</a>
+      <a href="rooster.html">Rooster</a>
+      <a href="aanmelden.html" class="active">Aanmelden</a>
+    </div>
+    <div class="mobile-menu-group">
+      <div class="mobile-menu-label">Voor VIDA Kids</div>
+      <a href="doel.html">Doel</a>
+      <a href="programma.html">Programma</a>
+      <a href="lesinhoud.html">Lesinhoud</a>
+      <a href="methode.html">Methode</a>
+      <a href="jaarplanning.html">Jaarplanning</a>
+    </div>
+    <a href="vida-kampen.html">Over VIDA Kampen</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main class="section">
+    <div class="section-title">Aanmelden</div>
+    <div class="section-subtitle">Geef je beschikbaarheid door of meld je kind aan voor de crèche.</div>
+    <p class="intro-text">Vul het formulier in en bij verzenden opent automatisch een WhatsApp-bericht naar <strong style="color:#FFEA00;">Paulien Mulder</strong> (coördinator) met je gegevens. Je kunt het bericht voor verzenden nog aanpassen.</p>
+
+    <div class="aanmeld-tabs" role="tablist">
+      <button class="aanmeld-tab actief" type="button" data-target="form-oppasser">🙋 Ik ben oppasser</button>
+      <button class="aanmeld-tab" type="button" data-target="form-ouder">👨‍👩‍👧 Ik ben ouder</button>
+    </div>
+
+    <!-- OPPASSER -->
+    <form class="aanmeld-form actief" id="form-oppasser" onsubmit="return submitAanmelden(event, 'oppasser')">
+      <div class="form-intro">Geef je beschikbaarheid door om in het rooster te worden opgenomen. Velden met <span style="color:rgba(255,80,80,0.85)">*</span> zijn verplicht.</div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label>Je naam <span class="req">*</span></label>
+          <input class="form-input" type="text" name="naam" required>
+        </div>
+        <div class="form-field">
+          <label>Telefoonnummer <span class="req">*</span></label>
+          <input class="form-input" type="tel" name="telefoon" required placeholder="06 ...">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Beschikbare zondag(en) <span class="req">*</span></label>
+        <input class="form-input" type="text" name="data" required placeholder="bijv. 14 juni, 28 juni en 5 juli">
+      </div>
+
+      <div class="form-field">
+        <label>Locatie voorkeur</label>
+        <div class="form-radio-group">
+          <div class="form-radio">
+            <input type="radio" name="locatie" id="op-sk" value="Stadskazerne (SK)">
+            <label for="op-sk">SK</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" name="locatie" id="op-bk" value="Bovenkerk (BK)">
+            <label for="op-bk">BK</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" name="locatie" id="op-geen" value="Geen voorkeur" checked>
+            <label for="op-geen">Geen voorkeur</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Ervaring</label>
+        <div class="form-radio-group">
+          <div class="form-radio">
+            <input type="radio" name="ervaring" id="op-eerste" value="Eerste keer">
+            <label for="op-eerste">Eerste keer</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" name="ervaring" id="op-vast" value="Vaste oppasser" checked>
+            <label for="op-vast">Vaste oppasser</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Opmerkingen (optioneel)</label>
+        <textarea class="form-textarea" name="opmerking" placeholder="Bijv. liever niet alleen, of voorkeur voor bepaalde leeftijdsgroep..."></textarea>
+      </div>
+
+      <button class="form-submit" type="submit">
+        💬 Verstuur via WhatsApp
+      </button>
+      <div class="form-hint">Je bericht wordt verzonden naar Paulien Mulder (coördinator).</div>
+    </form>
+
+    <!-- OUDER -->
+    <form class="aanmeld-form" id="form-ouder" onsubmit="return submitAanmelden(event, 'ouder')">
+      <div class="form-intro">Meld je kind aan voor de oppascrèche (0–4 jaar). Velden met <span style="color:rgba(255,80,80,0.85)">*</span> zijn verplicht.</div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label>Je naam (ouder) <span class="req">*</span></label>
+          <input class="form-input" type="text" name="ouder" required>
+        </div>
+        <div class="form-field">
+          <label>Telefoonnummer <span class="req">*</span></label>
+          <input class="form-input" type="tel" name="telefoon" required placeholder="06 ...">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label>Naam kind <span class="req">*</span></label>
+          <input class="form-input" type="text" name="kind" required>
+        </div>
+        <div class="form-field">
+          <label>Leeftijd <span class="req">*</span></label>
+          <input class="form-input" type="text" name="leeftijd" required placeholder="bijv. 2 jaar">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Aanwezig op</label>
+        <input class="form-input" type="text" name="data" placeholder="bijv. structureel elke zondag, of 14 juni">
+      </div>
+
+      <div class="form-field">
+        <label>Eerste keer bij VIDA Kids?</label>
+        <div class="form-radio-group">
+          <div class="form-radio">
+            <input type="radio" name="eerste" id="ou-ja" value="Ja, eerste keer" checked>
+            <label for="ou-ja">Ja</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" name="eerste" id="ou-nee" value="Nee, al eerder geweest">
+            <label for="ou-nee">Nee</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Allergieën / bijzonderheden (optioneel)</label>
+        <textarea class="form-textarea" name="bijzonderheden" placeholder="Bijv. allergieën, slaapritme, dingen die we moeten weten..."></textarea>
+      </div>
+
+      <button class="form-submit" type="submit">
+        💬 Verstuur via WhatsApp
+      </button>
+      <div class="form-hint">Je bericht wordt verzonden naar Paulien Mulder (coördinator).</div>
+    </form>
+  </main>
+
+  <footer class="footer">VIDA Kids maakt deel uit van <span>VIDA Kampen</span></footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Tab-switcher
+    document.querySelectorAll('.aanmeld-tab').forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        document.querySelectorAll('.aanmeld-tab').forEach(function (t) { t.classList.remove('actief'); });
+        document.querySelectorAll('.aanmeld-form').forEach(function (f) { f.classList.remove('actief'); });
+        tab.classList.add('actief');
+        document.getElementById(tab.dataset.target).classList.add('actief');
+      });
+    });
+
+    // Verzenden naar WhatsApp van Paulien (+31 6 15 90 66 54)
+    window.submitAanmelden = function (e, type) {
+      e.preventDefault();
+      var fd = new FormData(e.target);
+      var get = function (k) { return (fd.get(k) || '').toString().trim() || '—'; };
+      var msg;
+      if (type === 'oppasser') {
+        msg =
+          'Hi Paulien, ik wil mijn beschikbaarheid doorgeven voor de oppascrèche.\n\n' +
+          '• Naam: ' + get('naam') + '\n' +
+          '• Telefoon: ' + get('telefoon') + '\n' +
+          '• Beschikbaar: ' + get('data') + '\n' +
+          '• Locatie: ' + get('locatie') + '\n' +
+          '• Ervaring: ' + get('ervaring') + '\n' +
+          '• Opmerking: ' + get('opmerking');
+      } else {
+        msg =
+          'Hi Paulien, ik wil mijn kind aanmelden voor de oppascrèche.\n\n' +
+          '• Ouder: ' + get('ouder') + '\n' +
+          '• Telefoon: ' + get('telefoon') + '\n' +
+          '• Kind: ' + get('kind') + ' (' + get('leeftijd') + ')\n' +
+          '• Aanwezig op: ' + get('data') + '\n' +
+          '• Eerste keer: ' + get('eerste') + '\n' +
+          '• Bijzonderheden: ' + get('bijzonderheden');
+      }
+      var url = 'https://wa.me/31615906654?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank', 'noopener');
+      return false;
+    };
+  </script>
+</body>
+</html>

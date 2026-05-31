@@ -1042,6 +1042,145 @@ a.contact-item:hover {
   line-height: 1.6;
 }
 
+/* AANMELDEN — concept formulieren */
+.aanmeld-tabs {
+  display: flex;
+  gap: 6px;
+  background: rgba(255,255,255,0.04);
+  border: 0.5px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 1.25rem;
+}
+.aanmeld-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 0.6rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.aanmeld-tab.actief {
+  background: #FFEA00;
+  color: #000;
+}
+.aanmeld-form {
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+.aanmeld-form.actief { display: flex; }
+.form-intro {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form-field label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,234,0,0.85);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.form-field label .req { color: rgba(255,80,80,0.85); margin-left: 2px; }
+.form-input,
+.form-textarea,
+.form-select {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 9px;
+  padding: 0.7rem 0.85rem;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: rgba(255,234,0,0.5);
+  background: rgba(0,0,0,0.55);
+}
+.form-textarea { resize: vertical; min-height: 70px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-radio-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.form-radio {
+  flex: 1;
+  min-width: 90px;
+  position: relative;
+}
+.form-radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.form-radio label {
+  display: block;
+  text-align: center;
+  padding: 0.55rem 0.6rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.form-radio input:checked + label {
+  background: rgba(255,234,0,0.12);
+  border-color: rgba(255,234,0,0.5);
+  color: #FFEA00;
+}
+.form-submit {
+  margin-top: 0.4rem;
+  background: #FFEA00;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.form-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255,234,0,0.2);
+}
+.form-hint {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 720px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
 /* VIDA APP DOWNLOAD CTA */
 .app-cta {
   display: flex;
