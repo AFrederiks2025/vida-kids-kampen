@@ -1021,6 +1021,91 @@ a.contact-item:hover {
   line-height: 1.6;
 }
 
+/* NOW BAR (datum + tijdstip bovenaan) */
+.now-bar {
+  background: rgba(255,234,0,0.06);
+  border-bottom: 1px solid rgba(255,234,0,0.18);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+.now-bar-datum {
+  font-weight: 600;
+  color: #fff;
+}
+.now-bar-tijd {
+  color: #FFEA00;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.now-bar-tijd::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #FFEA00;
+  animation: nowPulse 2s infinite;
+}
+@keyframes nowPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.45; transform: scale(0.85); }
+}
+
+/* PROGRAMMA: actief blok */
+.tijdblok.actief .tijdblok-kaart {
+  background: rgba(255,234,0,0.12);
+  border-color: rgba(255,234,0,0.5);
+  box-shadow: 0 0 0 1px rgba(255,234,0,0.2);
+}
+.tijdblok.actief .tijdblok-dot {
+  background: #FFEA00;
+  border-color: #FFEA00;
+  box-shadow: 0 0 0 5px rgba(255,234,0,0.18);
+}
+.tijdblok.actief .tijdblok-tijd { color: #FFEA00; }
+.nu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  background: #FFEA00;
+  color: #000;
+  padding: 2px 7px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-left: 6px;
+}
+.nu-badge::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #000;
+  animation: nowPulse 1.5s infinite;
+}
+
+/* ROOSTER: volgende zondag */
+.rooster-rij.volgende {
+  background: rgba(255,234,0,0.05);
+  border-color: rgba(255,234,0,0.3);
+}
+.rooster-status.volgende {
+  color: rgba(255,234,0,0.85);
+  background: rgba(255,234,0,0.1);
+  border: 0.5px solid rgba(255,234,0,0.3);
+}
+
 /* ===== COMPACTE MOBIELE VERSIE ===== */
 @media (max-width: 720px) {
   .nav { display: none; }
@@ -1062,6 +1147,8 @@ a.contact-item:hover {
   .stap-kaart { padding: 0.95rem 1rem; }
   .stap-header { gap: 10px; }
   .stap-titel { font-size: 14px; }
+
+  .now-bar { padding: 0.6rem 1rem; font-size: 12px; gap: 0.4rem 1rem; }
 
   .footer { margin-top: 2rem; padding: 1.5rem 1.25rem 1rem; }
 }
