@@ -615,6 +615,20 @@ body {
 }
 .serie-leeftijd { font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 1px; }
 .serie-body { padding: 0.9rem 1rem; }
+.serie-kernteksten {
+  margin: 0 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.06);
+}
+.serie-kernteksten-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255,234,0,0.65);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.serie-kernteksten .vers-chips { margin-top: 0; }
 .serie-verhaal {
   display: flex;
   align-items: center;
