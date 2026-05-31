@@ -289,52 +289,89 @@
     .doel-titel { font-size: 13px; font-weight: 600; color: #FFEA00; margin-bottom: 4px; }
     .doel-tekst { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
 
-    /* BIJBELTEKST (uitklapbaar) */
-    .vers {
+    /* BIJBELTEKST (klikbare afkorting + pop-up) */
+    .vers-chip {
       margin-top: 10px;
-      border-top: 0.5px solid rgba(255,255,255,0.08);
-      padding-top: 9px;
-    }
-    .vers summary {
-      list-style: none;
-      cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       font-size: 11px;
       font-weight: 600;
       color: #FFEA00;
+      background: rgba(255,234,0,0.1);
+      border: 0.5px solid rgba(255,234,0,0.25);
+      border-radius: 20px;
+      padding: 4px 11px;
+      cursor: pointer;
       user-select: none;
+      transition: background 0.15s, border-color 0.15s;
     }
-    .vers summary::-webkit-details-marker { display: none; }
-    .vers summary::before {
-      content: "📖";
-      font-size: 11px;
+    .vers-chip:hover, .vers-chip:active {
+      background: rgba(255,234,0,0.18);
+      border-color: rgba(255,234,0,0.5);
     }
-    .vers summary::after {
-      content: "›";
-      font-size: 14px;
+    .vers-chip::before { content: "📖"; font-size: 11px; }
+
+    /* POP-UP / MODAL */
+    .vers-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .vers-modal-overlay.open { display: flex; }
+    .vers-modal {
+      background: #111;
+      border: 0.5px solid rgba(255,234,0,0.3);
+      border-radius: 18px;
+      max-width: 440px;
+      width: 100%;
+      padding: 1.75rem 1.5rem 1.5rem;
+      position: relative;
+      animation: versPop 0.2s ease;
+    }
+    @keyframes versPop {
+      from { opacity: 0; transform: scale(0.94); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .vers-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: none;
+      color: rgba(255,255,255,0.6);
+      font-size: 18px;
       line-height: 1;
-      transition: transform 0.2s;
-      opacity: 0.7;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
     }
-    .vers[open] summary::after { transform: rotate(90deg); }
-    .vers-tekst {
-      margin-top: 8px;
+    .vers-modal-close:hover { background: rgba(255,255,255,0.15); color: #fff; }
+    .vers-modal-ref {
       font-size: 12px;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.7;
-      font-style: italic;
-      border-left: 2px solid rgba(255,234,0,0.35);
-      padding-left: 10px;
+      font-weight: 700;
+      color: #FFEA00;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
     }
-    .vers-ref {
-      display: block;
-      margin-top: 5px;
-      font-size: 11px;
-      font-style: normal;
-      font-weight: 600;
-      color: rgba(255,234,0,0.75);
+    .vers-modal-tekst {
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.75;
+      font-style: italic;
     }
 
     /* TIJDLIJN (programma) */
@@ -956,10 +993,7 @@
           <div>
             <div class="doel-titel">Geliefd voelen</div>
             <div class="doel-tekst">Elk kind ervaart dat het gekend en geliefd is — door God en door de mensen om hem heen. Dit is de basis van alles wat we doen.</div>
-            <details class="vers">
-              <summary>Bijbeltekst lezen</summary>
-              <div class="vers-tekst">"Met een eeuwige liefde heb Ik u liefgehad, daarom heb Ik u getrokken met goedertierenheid."<span class="vers-ref">Jeremia 31:3</span></div>
-            </details>
+            <div class="vers-chip" onclick="openVers('Jeremia 31:3', '&quot;Met een eeuwige liefde heb Ik u liefgehad, daarom heb Ik u getrokken met goedertierenheid.&quot;')">Jeremia 31:3</div>
           </div>
         </div>
         <div class="doel-item">
@@ -967,10 +1001,7 @@
           <div>
             <div class="doel-titel">Bijbel leren kennen</div>
             <div class="doel-tekst">Kinderen maken op een toegankelijke manier kennis met de verhalen en waarden uit de Bijbel, passend bij hun leeftijd.</div>
-            <details class="vers">
-              <summary>Bijbeltekst lezen</summary>
-              <div class="vers-tekst">"Uw woord is een lamp voor mijn voet en een licht op mijn pad."<span class="vers-ref">Psalm 119:105</span></div>
-            </details>
+            <div class="vers-chip" onclick="openVers('Psalm 119:105', '&quot;Uw woord is een lamp voor mijn voet en een licht op mijn pad.&quot;')">Psalm 119:105</div>
           </div>
         </div>
         <div class="doel-item">
@@ -978,10 +1009,7 @@
           <div>
             <div class="doel-titel">Gemeenschap ervaren</div>
             <div class="doel-tekst">Samen spelen, delen en leren. Kinderen bouwen vriendschappen en leren wat het betekent om onderdeel te zijn van een gemeenschap.</div>
-            <details class="vers">
-              <summary>Bijbeltekst lezen</summary>
-              <div class="vers-tekst">"Want waar twee of drie in Mijn Naam bijeengekomen zijn, daar ben Ik in hun midden."<span class="vers-ref">Mattheüs 18:20</span></div>
-            </details>
+            <div class="vers-chip" onclick="openVers('Mattheüs 18:20', '&quot;Want waar twee of drie in Mijn Naam bijeengekomen zijn, daar ben Ik in hun midden.&quot;')">Mattheüs 18:20</div>
           </div>
         </div>
         <div class="doel-item">
@@ -989,10 +1017,7 @@
           <div>
             <div class="doel-titel">Geloof ontdekken</div>
             <div class="doel-tekst">We prikkelen nieuwsgierigheid. Vragen zijn welkom. Kinderen mogen op hun eigen tempo ontdekken wat geloof voor hen betekent.</div>
-            <details class="vers">
-              <summary>Bijbeltekst lezen</summary>
-              <div class="vers-tekst">"Bid, en u zal gegeven worden; zoek, en u zult vinden; klop, en er zal voor u opengedaan worden."<span class="vers-ref">Mattheüs 7:7</span></div>
-            </details>
+            <div class="vers-chip" onclick="openVers('Mattheüs 7:7', '&quot;Bid, en u zal gegeven worden; zoek, en u zult vinden; klop, en er zal voor u opengedaan worden.&quot;')">Mattheüs 7:7</div>
           </div>
         </div>
         <div class="doel-item">
@@ -1000,10 +1025,7 @@
           <div>
             <div class="doel-titel">Veilige omgeving</div>
             <div class="doel-tekst">Het kinderwerk is een veilige plek waar elk kind zichzelf mag zijn, ongeacht achtergrond of kennisniveau.</div>
-            <details class="vers">
-              <summary>Bijbeltekst lezen</summary>
-              <div class="vers-tekst">"De HEERE is mijn Herder, mij ontbreekt niets."<span class="vers-ref">Psalm 23:1</span></div>
-            </details>
+            <div class="vers-chip" onclick="openVers('Psalm 23:1', '&quot;De HEERE is mijn Herder, mij ontbreekt niets.&quot;')">Psalm 23:1</div>
           </div>
         </div>
         <div class="doel-item">
@@ -1011,10 +1033,7 @@
           <div>
             <div class="doel-titel">Fundering leggen</div>
             <div class="doel-tekst">We leggen een fundament dat meegroeit. Wat kinderen hier leren, draagt hen door het leven — ook als ze ouder worden.</div>
-            <details class="vers">
-              <summary>Bijbeltekst lezen</summary>
-              <div class="vers-tekst">"Ieder dan die deze woorden van Mij hoort en ze doet, die zal Ik vergelijken met een verstandig man, die zijn huis op de rots bouwde."<span class="vers-ref">Mattheüs 7:24</span></div>
-            </details>
+            <div class="vers-chip" onclick="openVers('Mattheüs 7:24', '&quot;Ieder dan die deze woorden van Mij hoort en ze doet, die zal Ik vergelijken met een verstandig man, die zijn huis op de rots bouwde.&quot;')">Mattheüs 7:24</div>
           </div>
         </div>
       </div>
@@ -1711,6 +1730,15 @@
     <div class="footer">VIDA Kids maakt deel uit van <span>VIDA Kampen</span></div>
   </div>
 
+  <!-- ======================== BIJBELTEKST POP-UP ======================== -->
+  <div class="vers-modal-overlay" id="vers-overlay" onclick="closeVers(event)">
+    <div class="vers-modal" onclick="event.stopPropagation()">
+      <button class="vers-modal-close" onclick="closeVers()" aria-label="Sluiten">×</button>
+      <div class="vers-modal-ref" id="vers-modal-ref"></div>
+      <div class="vers-modal-tekst" id="vers-modal-tekst"></div>
+    </div>
+  </div>
+
   <script>
     function showPage(name) {
       document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
@@ -1722,6 +1750,20 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+
+    function openVers(ref, tekst) {
+      document.getElementById('vers-modal-ref').textContent = ref;
+      document.getElementById('vers-modal-tekst').textContent = tekst;
+      document.getElementById('vers-overlay').classList.add('open');
+    }
+
+    function closeVers(event) {
+      document.getElementById('vers-overlay').classList.remove('open');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { closeVers(); }
+    });
   </script>
 
 </body>
