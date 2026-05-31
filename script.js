@@ -48,6 +48,16 @@
     }
   });
 
+  // Stuur Android-gebruikers naar de Play Store, anderen naar de App Store (de standaard href)
+  window.appRedirect = function (e) {
+    if (/android/i.test(navigator.userAgent)) {
+      e.preventDefault();
+      window.open('https://play.google.com/store/apps/details?id=nl.tizin.socie.vidakampen', '_blank', 'noopener');
+      return false;
+    }
+    return true;
+  };
+
   window.openVers = function (ref, tekst) {
     document.getElementById('vers-modal-ref').textContent = ref;
     document.getElementById('vers-modal-tekst').textContent = tekst;

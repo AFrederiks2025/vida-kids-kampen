@@ -1028,6 +1028,54 @@ a.contact-item:hover {
   line-height: 1.6;
 }
 
+/* VIDA APP DOWNLOAD CTA */
+.app-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 1.2rem 1.4rem;
+  background: rgba(255,234,0,0.08);
+  border: 1px solid rgba(255,234,0,0.3);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s, transform 0.15s;
+}
+.app-cta:hover {
+  background: rgba(255,234,0,0.13);
+  transform: translateY(-1px);
+}
+.app-cta-icon { font-size: 28px; flex-shrink: 0; }
+.app-cta-titel {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFEA00;
+  margin-bottom: 2px;
+}
+.app-cta-tekst {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+.app-cta-pijl {
+  margin-left: auto;
+  font-size: 22px;
+  color: #FFEA00;
+  flex-shrink: 0;
+}
+.app-store-links {
+  margin-top: 0.5rem;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+}
+.app-store-links a {
+  color: rgba(255,234,0,0.75);
+  text-decoration: none;
+  padding: 0 6px;
+}
+.app-store-links a:hover { color: #FFEA00; }
+
 /* OVER VIDA KAMPEN PAGINA */
 .vk-card {
   background: linear-gradient(135deg, rgba(255,234,0,0.08), rgba(255,234,0,0.02));
